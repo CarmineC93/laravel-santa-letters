@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,4 @@ Route::get('/', function () {
 })->name('home');
 
 
-Route::resource('letters', ComicController::class);
+Route::resource('letters', PageController::class);
