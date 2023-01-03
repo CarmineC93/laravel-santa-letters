@@ -25,6 +25,8 @@
                         <th scope="col">Content</th>
                         <th scope="col">Rating</th>
                         <th scope="col">Delivered</th>
+                        <th scope="col">Actions</th>
+
 
 
 
@@ -40,12 +42,17 @@
                             <td>{{ $letter->arrival_letter }}</td>
                             <td>{{ $letter->present }}</td>
                             <td>{{ $letter->content_letter }}</td>
-                            <td>{{ $letter->rating }}</td>
-                            <td>{{ $letter->delivered }}</td>
-
-
-
-                            {{-- <td>
+                            <td>{{ $letter->rating }} <i class="fa-solid fa-heart"></i></td>
+                            @if ($letter->delivered === 1)
+                                <td>
+                                    <i class="fa-solid fa-gift"></i>
+                                </td>
+                            @else
+                                <td>
+                                    <i class="fa-regular fa-circle-xmark"></i>
+                                </td>
+                            @endif
+                            <td>
                                 <a href="{{ route('letters.show', $letter->id) }}" class="btn btn-success">
                                     <i class="fa-solid fa-eye"></i>
                                 </a>
@@ -63,7 +70,7 @@
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
                                 </form>
-                            </td> --}}
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
@@ -71,5 +78,4 @@
         </div>
         {{-- @include('partials.delete-modal') --}}
     </section>
-    {{-- Table --}}
 @endsection
