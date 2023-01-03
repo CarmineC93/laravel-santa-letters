@@ -83,9 +83,13 @@ class PageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        $letter = Letter::findOrFail($id);
 
+        //richiamo funzione validation
+        $editData = $this->validation($request->all()); //prelevo tutti i dati che sono stati inseriti nel form di edit.blade.php
+        $letter->update($editData); //aggiorno i dati nel database
+        return redirect()->route('letters.show', $letter->id); //reindirizzo una volta aggiornati i dati nella pagina show dell'elemento modificato    }
+    }
     /**
      * Remove the specified resource from storage.
      *
