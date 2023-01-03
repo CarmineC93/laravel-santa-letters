@@ -49,7 +49,7 @@
                                 </td>
                             @else
                                 <td>
-                                    <i class="fa-regular fa-circle-xmark"></i>
+                                    <i class="fa-solid fa-spinner"></i>
                                 </td>
                             @endif
                             <td>

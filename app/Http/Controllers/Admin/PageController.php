@@ -68,9 +68,10 @@ class PageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Letter $letter)
     {
-        //
+
+        return view('letters.edit', compact('letter'));
     }
 
     /**
@@ -96,6 +97,8 @@ class PageController extends Controller
         //
     }
 
+
+    //>>>FUNCTIONS<<<
 
     //qui una funzione che ci permatta di non riscrivere stesso codice e nel quale possiamo inserire array con messaggi di errore per ogni validazione non rispettata
     private function validation($data)
