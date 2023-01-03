@@ -66,7 +66,7 @@
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger delete-btn"
-                                        data-letter-title="{{ $letter->name }}">
+                                        data-letter-name="{{ $letter->name }}">
                                         <i class="fa-solid fa-trash"></i>
                                     </button>
                                 </form>
@@ -76,6 +76,6 @@
                 </tbody>
             </table>
         </div>
-        {{-- @include('partials.delete-modal') --}}
+        @include('partials.delete-modal')
     </section>
 @endsection
