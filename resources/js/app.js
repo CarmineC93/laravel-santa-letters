@@ -28,3 +28,5 @@ deleteBtns.forEach((btn)=>{
         modal.show()
     });
 });
+
+

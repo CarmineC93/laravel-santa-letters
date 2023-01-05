@@ -3,4 +3,10 @@
 
 @section('content')
     <a href="/letters">See All The Letters Sent By The Children</a>
+
+
+    <canvas width="600" height="600">
+    </canvas>
+
+
 @endsection
