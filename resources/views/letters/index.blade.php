@@ -43,6 +43,7 @@
                             <td>{{ $letter->present }}</td>
                             <td>{{ $letter->content_letter }}</td>
                             <td>{{ $letter->rating }} <i class="fa-solid fa-heart"></i></td>
+                            {{-- <td>{{letter->delivered === 0 ? 'no' : 'si'}}</td> --}}
                             @if ($letter->delivered === 1)
                                 <td>
                                     <i class="fa-solid fa-gift"></i>
